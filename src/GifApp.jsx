@@ -1,22 +1,35 @@
 import { useState } from "react";
 import AddCategory from "./componentes/AddCategory";
+import ItemProduct from "./componentes/ItemProduct";
 
-const GifApp = () => {
-  const [categories, setCategories] = useState(["Demon slayer"]);
+// import ItemProduct from "./componentes/ItemProduct";
 
-  const onAddCategory = (newCategory) => {
-    if (categories.includes(newCategory)) return;
+const GifApp = ({products}) => {
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
-    setCategories([newCategory, ...categories]);
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+    filterProducts(category);
   };
+
+  const filterProducts = (category) => {
+    // Realizar la lógica de filtrado aquí utilizando la categoría seleccionada
+    const filtered = products.filter((product) => product.category === category);
+    setFilteredProducts(filtered);
+  };
+ 
   return (
     <>
-      <h1>GifApp</h1>
-      <AddCategory onNewCategory={(event) => onAddCategory(event)} />
-
-      {categories.map((category) => {
-        return <li key={category}>{category}</li>;
-      })}
+          <div>
+      <h1>App</h1>
+      <AddCategory onCategoryChange={handleCategoryChange} />
+      <p>Selected category: {selectedCategory}</p>
+      {/* Mostrar los productos filtrados */}
+      <ItemProduct/>  
+      
+     
+    </div>
     </>
   );
 };
