@@ -1,5 +1,5 @@
 import React from 'react'
-import GetProducts from './helpers/GetProducts'
+import GetProducts from './helpers/getProducts'
 
 const ItemProduct = ({product}) => {
   GetProducts(product)
