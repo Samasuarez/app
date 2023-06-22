@@ -1,20 +1,20 @@
 import React from "react";
-import { BrowserRouter, Router, Route, Routes } from "react-router-dom";
+import { Router, Route, Routes } from "react-router-dom";
 import NavBar from "./componentes/NavBar";
-import Home from "./Home";
+import Home from "./pages/Home";
 // import ProductsDetail from "./componentes/ProductsDetail";
 
 const GifApp = () => {
   return (
-    <BrowserRouter>
+    <div>
       <Router>
         <NavBar />
         <Routes>
-          <Route path="/" Element={<Home />} />
+          <Route path="/" element={<Home />} />
           {/* <Route path="/products/:id" Element={<ProductsDetail />} /> */}
         </Routes>
       </Router>
-    </BrowserRouter>
+  </div>
   );
 };
 

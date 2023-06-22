@@ -1,10 +1,12 @@
-import{useContext} from 'react'
-import { ProductsContext } from "./componentes/context/productContext";
+import{React ,useContext} from 'react'
+import { ProductsContext } from "../context/productContext";
 const Home = () => {
     const { products } = useContext(ProductsContext);
     console.log(products);
   return (
-    <div>Home</div>
+    <div>
+      <h1>home</h1>
+    </div>
   )
 }
 
