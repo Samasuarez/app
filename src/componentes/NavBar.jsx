@@ -56,10 +56,10 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand">
           Navbar
         </a>
-        <button
+        {/* <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -83,7 +83,7 @@ const NavBar = () => {
             </a>
             <a className="nav-link disabled">Disabled</a>
           </div>
-        </div>
+        </div> */}
       </div>
     </nav>
   );

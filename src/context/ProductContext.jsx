@@ -14,6 +14,11 @@ const ProductProvider = ({ children }) => {
     fetchProducts();
   }, []);
   return( 
+
+
+
+
+    
     <ProductsContext.Provider value={{ products }}>
       {children}
     </ProductsContext.Provider>)
