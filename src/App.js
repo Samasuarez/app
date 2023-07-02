@@ -3,6 +3,8 @@ import NavBar from "./componentes/NavBar";
 import Home from "./pages/Home";
 // import ProductsDetail from "./pages/ProductsDetail";
 import ProductProvider from "./context/ProductContext";
+import Footer from "./componentes/Footer";
+import ProductsDetail from "./pages/ProductsDetail";
 const App = () => {
   return (
     <ProductProvider>
@@ -11,8 +13,10 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/products/:id" element={ /> */}
+          <Route path="/products/:id" element={<ProductsDetail/>} />
+          
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </ProductProvider>
 
