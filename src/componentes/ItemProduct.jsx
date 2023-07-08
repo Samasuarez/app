@@ -1,12 +1,13 @@
 import { React, UseContext } from "react";
 import { Link } from "react-router-dom";
 import { BsPlus, BsEyeFill } from "react-icons/bs";
+import 'tailwindcss/tailwind.css'
 const ItemProduct = ({ product }) => {
   const { id, image, title, price, category } = product;
 
   return (
-    <div>
-      <div className="border border-[#e4e4e4] h-[300px] mb-4 relative overflow-hiden group transition ">
+    <div >
+      <div className="border border-[#e4e4e4] h-[300px] mb-4 relative overflow-hiden group transition  ">
         <div className="w-full h-full flex justify-center items-center">
           <div className="w-[200px] mx-auto flex justify-center items-center ">
             <img
@@ -30,7 +31,7 @@ const ItemProduct = ({ product }) => {
         </div>
       </div>
       <div>
-        <div className="text-sm capitalize text-gray-500 mb-11">{category}</div>
+        <div className="text-decoration-line-none text-sm capitalize text-gray-500 mb-11">{category}</div>
         <Link to={"/product/${id}"}>
           <h2 className="font-semibold mb-1">{title}</h2>
         </Link>

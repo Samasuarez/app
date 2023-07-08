@@ -7,3 +7,6 @@
     @apply font-primary text-primary;
   }
 }
+.text{
+  text-decoration-line: none
+}
